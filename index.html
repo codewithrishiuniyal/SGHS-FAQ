@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Coding by Rishi |-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive FAQ Accordion | SGHS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="accordion">
+    <div class="image-box">
+      <img src="./n_logo.jpeg" alt="Accordion">
+    </div>
+    <div class="accordion-text">
+      <div class="title">FAQ</div>
+    <ul class="faq-text">
+      <li>
+        <div class="question-arrow">
+          <span class="question">Beneficiary details are not shown while submitting the SGHS card at the hospital?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>If there is no detail when the SGHS card is applied in the hospital, then the screenshot of the real-time Error has to be shared the mail  on Itaauy@gmail.com</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">From where the data of SGHS card holders family has to be updated</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>The SGHS card holder has to update the family data from the IFMS portal.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">Are all types of diseases treated in Ayushman</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Treatment of all types of diseases is given in Ayushman Yojana</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">How To Download Ayushman Card And SGHS card</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Go to https://bis.pmjay.gov.in and follow the step</p>
+        <span class="line"></span>
+      </li>
+      <li>
+      </li>
+    </ul>
+    </div>
+  </div>
+
+
+  <script>
+    let li = document.querySelectorAll(".faq-text li");
+    for (var i = 0; i < li.length; i++) {
+      li[i].addEventListener("click", (e)=>{
+        let clickedLi;
+        if(e.target.classList.contains("question-arrow")){
+          clickedLi = e.target.parentElement;
+        }else{
+          clickedLi = e.target.parentElement.parentElement;
+        }
+       clickedLi.classList.toggle("showAnswer");
+      });
+    }
+  </script>
+
+</body>
+</html>
